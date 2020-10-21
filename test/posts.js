@@ -11,7 +11,7 @@ const {
 
 const TOKEN = process.env.USER_TOKEN;
 
-describe.only('Posts', () => {
+describe('Posts', () => {
   let user, postId;
 
   before(async () => {
@@ -37,7 +37,7 @@ describe.only('Posts', () => {
         .set('Authorization', `Bearer ${TOKEN}`)
         .send(data);
 
-      expect(res.body.data).to.deep.include(data);
+      expect(res.body.data).to.deep.include('data');
       postId = res.body.data.id;
     });
 
