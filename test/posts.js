@@ -33,20 +33,24 @@ describe('Posts', () => {
       };
 
       const res = await request
-        .post('posts')
+        .post('postss')
         .set('Authorization', `Bearer ${TOKEN}`)
         .send(data);
 
-      expect(res.body.data).to.deep.include('data');
+      expect(res.body.data).to.deep.include(data);
       postId = res.body.data.id;
     });
 
     // dependent on previous test
     it('posts/:id', async () => {
-      await request
-        .get(`posts/${postId}`)
-        .set('Authorization', `Bearer ${TOKEN}`)
-        .expect(200);
+      if (postId) {
+        await request
+          .get(`posts/${postId}`)
+          .set('Authorization', `Bearer ${TOKEN}`)
+          .expect(200);
+      } else {
+        throw new Error`postId is invalid ${postId}`();
+      }
     });
   });
 

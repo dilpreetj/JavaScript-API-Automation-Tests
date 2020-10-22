@@ -3,8 +3,7 @@ const request = supertest('https://gorest.co.in/public-api/');
 
 import { expect } from 'chai';
 
-const TOKEN =
-  'f23c96ab955134d34fb15a05c891320a81c0a6a309c9f481604e380d19bef872';
+const TOKEN = process.env.TOKEN;
 
 describe('Users', () => {
   it('GET /users', () => {
