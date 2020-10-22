@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.9920" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-10-22T00:51:19" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Posts" timestamp="2020-10-22T00:51:19" tests="0" file="C:\Users\dilpr\Desktop\automation-bro\super-api-tests\test\posts.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2020-10-22T00:51:20" tests="2" file="C:\Users\dilpr\Desktop\automation-bro\super-api-tests\test\posts.js" time="1.9920" failures="0">
+    <testcase name="Posts POST /posts" time="1.0100" classname="/posts">
+    </testcase>
+    <testcase name="Posts POST posts/:id" time="0.9820" classname="posts/:id">
+    </testcase>
+  </testsuite>
+</testsuites>
