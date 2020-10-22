@@ -11,7 +11,7 @@ const {
 
 const TOKEN = process.env.USER_TOKEN;
 
-describe('Posts', () => {
+describe.only('Posts', () => {
   let user, postId;
 
   before(async () => {
