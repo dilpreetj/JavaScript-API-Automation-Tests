@@ -33,7 +33,7 @@ describe('Posts', () => {
       };
 
       const res = await request
-        .post('postss')
+        .post('posts')
         .set('Authorization', `Bearer ${TOKEN}`)
         .send(data);
 
@@ -49,7 +49,7 @@ describe('Posts', () => {
           .set('Authorization', `Bearer ${TOKEN}`)
           .expect(200);
       } else {
-        throw new Error`postId is invalid ${postId}`();
+        throw new Error(`postId is invalid - ${postId}`);
       }
     });
   });
